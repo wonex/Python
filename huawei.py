@@ -97,3 +97,17 @@ import sys
 #         else:
 #             res = min(res, tmp)
 #     print(res)
+
+if __name__ == '__main__':
+    s, n = sys.stdin.readline().strip().split()
+    n = int(n)
+    res = ""
+    for i in s:
+        if ord(i) > 128:
+            n -= 2
+        else:
+            n -= 1
+        if n < 0:
+            break
+        res += i
+    print(res)
